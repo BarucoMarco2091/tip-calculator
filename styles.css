@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--lightGrayishCyan);
+    height: 100vh;
+}
+
+header h2 {
+    margin-top: 7vh;
+    text-align: center;
+    font-family: Space mono, sans-serif, serif;
+    color: var(--darkGrayishCyan);
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 120vh;
+    height: 60vh;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 3vh;
+}
+
+#container #data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#container #data label {
+    font-family: Space mono, sans-serif, serif;
+    color: var(--darkGrayishCyan);
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+#container #data #bill {
+    height: 3vh;
+    width: 45vh;
+    margin: 0 auto;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+#container #data #card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2vh;
+}
+
+#container #data #card-grid #card .card-button {
+    height: 6vh;
+    width: 8vh;
+    margin-top: 2vh;
+    font-family: Space mono, sans-serif, serif;
+    color: var(--white);
+    background-color: var(--veryDarkCyan);
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+#container #data #card-grid #card .card-button:hover {
+    background-color: var(--lightGrayishCyan);
+}
+
+#container #data #card-grid #card .card-button.active {
+    color: black;
+    background-color: var(--lightGrayishCyan);
+}
+
+#container #data #people {
+    height: 3vh;
+    width: 45vh;
+    margin: 0 auto;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+#container #data .calculate-tip {
+    width: 35vh;
+    height: 6vh;
+    margin: 0 auto;
+    margin-top: 3vh;
+    border-radius: 1vh;
+    background-color: var(--veryDarkCyan);
+    color: var(--white);
+    font-family: Space mono, sans-serif, serif;
+    cursor: pointer;
+}
+
+#container #data .calculate-tip:hover {
+    background-color: var(--lightGrayishCyan);
+}
+
+#container #results {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--veryDarkCyan);
+    margin: 4vh;
+    border-radius: 3vh;
+}
+
+#container #results p {
+    color: var(--white);
+    font-family: Space mono, sans-serif, serif;
+    margin-left: 5vh;
+}
+
+#container #results span {
+    color: var(--strongCyan);
+    font-family: Space mono, sans-serif, serif;
+    margin-left: 5vh;
+}
+
+#container #results .reset {
+    width: 35vh;
+    height: 6vh;
+    margin: 0 auto;
+    margin-top: 6vh;
+    border-radius: 1vh;
+    background-color: var(--strongCyan);
+    color: var(--white);
+    font-family: Space mono, sans-serif, serif;
+    cursor: pointer;
+}
+
+@media screen and (max-width:480px) {
+    
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    #container #data {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #container #results {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #container #data #card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    #container #data {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #container #results {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #container #data #card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

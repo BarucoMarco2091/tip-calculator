@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h2>SPLI<br>TTER</h2>
+    </header>
+    <main>
+        <div id="container">
+            <div id="data">
+                <label for="bill">Bill</label>
+                <input type="text" name="bill" id="bill">
+                <div id="card-grid">
+                    <label for="tip">Select Tip %</label>
+                    <div id="card">
+                        <button class="card-button" value="5">5%</button>
+                        <button class="card-button" value="10">10%</button>
+                        <button class="card-button" value="15">15%</button>
+                        <button class="card-button" value="25">25%</button>
+                        <button class="card-button" value="50">50%</button>
+                        <button class="card-button" value="70">70%</button>
+                    </div>
+                </div>
+                <label for="people">Number of People</label>
+                <input type="text" name="people" id="people">
+                <button type="button" class="calculate-tip">Calculate</button>
+            </div>
+            <div id="results">
+                <p>Tip Amount<br> / person</p>
+                <span id="tip-per-person">$0.00</span>
+                <p>Total<br>/ person</p>
+                <span id="total-person">$0.00</span>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
